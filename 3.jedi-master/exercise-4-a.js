@@ -34,9 +34,10 @@ function createList(infos) {
 
   infos.forEach(({ title, imgUrl }) => {
     itemListComponent +=
-      `<h4>${title}</h4>
+      `<div class="list-item">
+      <h4>${title}</h4>
       <img src=${imgUrl} alt=${title}>
-      `
+    </div>`
   });
   console.log(itemListComponent);
   renderList(itemListComponent)
