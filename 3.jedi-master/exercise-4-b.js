@@ -45,21 +45,11 @@ function createList(infos) {
 }
 
 function renderList(list) {
-  document.querySelector("body").innerHTML = list
-}
-
-function createButton() {
-  const button = "<button>DELETE THE LAST LIST ITEM</button>"
-  renderBtn(button)
-  addButtonClickEvent()
+  document.querySelector("body").innerHTML += list
 }
 
 function addButtonClickEvent() {
   document.querySelector("button").addEventListener("click", () => removeLastListItem())
-}
-
-function renderBtn(btn) {
-  document.querySelector("body").innerHTML += btn
 }
 
 function removeLastListItem() {
@@ -71,5 +61,5 @@ function removeLastListItem() {
 }
 
 createList(places)
-createButton()
+addButtonClickEvent()
 
